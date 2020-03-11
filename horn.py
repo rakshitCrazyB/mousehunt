@@ -3,13 +3,16 @@ import time as delay
 import requests
 from datetime import datetime
 
+def notif(notice):
+	notify.send(datetime.now().strftime("%m/%d/%Y, %H:%M:%S")+" " +notice)
+
 def log (info):
 	print (datetime.now().strftime("%m/%d/%Y, %H:%M:%S")+" "+info);
 
 notify=Notify()
 sleeptime = 900
 cookies={}
-hgsessid="80JW3YBDbfMz13ISCp32BoMbC22Gifi5RrDYtMjA85CTdCyvYxfOdqnL1SQ9CUj1"
+hgsessid="p1I2BVE8KGbFcw1Sza0TdbhjPAsLxqN08ebL7ZlskBfSPzgCyqgusApDSKEWuU45"
 phpsessid="jtam5thlg4l3j0od2hbfkbhk41"
 cookies = {'HGSESSID': hgsessid,'PHPSESSID': phpsessid,'has_logged_in':'true'}
 
@@ -17,8 +20,8 @@ url='https://www.mousehuntgame.com/turn.php'
 #url='https://www.mousehuntgame.com'
 
 log("Starting Script")
-log(str(notify.info()))
-notify.send('Starting Script')
+#log(str(notify.info()))
+notif('Starting Script')
 while True:
 
 	log("Calling mousehunt")
@@ -30,7 +33,7 @@ while True:
 
 	if "Rakshit Bansal" not in response:
 		log("LoggedIn "+str(False))
-		notify.send('Logged out of MH')
+		notif('Logged out of MH')
 		log("Dying as logged out")	
 		exit()
 	else:
@@ -47,7 +50,6 @@ while True:
 		sleeptime=3
 	else:	
 		minsec=time.split(':')
-		print minsec
 		min=int(minsec[0])
 		sec=int(minsec[1])
 		timetohorn=min*60 + sec
