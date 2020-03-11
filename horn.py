@@ -9,7 +9,9 @@ def log (info):
 notify=Notify()
 sleeptime = 900
 cookies={}
-cookies = {'HGSESSID': '80JW3YBDbfMz13ISCp32BoMbC22Gifi5RrDYtMjA85CTdCyvYxfOdqnL1SQ9CUj1','PHPSESSID':'80JW3YBDbfMz13ISCp32BoMbC22Gifi5RrDYtMjA85CTdCyvYxfOdqnL1SQ9CUj1','has_logged_in':'true'}
+hgsessid="80JW3YBDbfMz13ISCp32BoMbC22Gifi5RrDYtMjA85CTdCyvYxfOdqnL1SQ9CUj1"
+phpsessid="jtam5thlg4l3j0od2hbfkbhk41"
+cookies = {'HGSESSID': hgsessid,'PHPSESSID': phpsessid,'has_logged_in':'true'}
 
 url='https://www.mousehuntgame.com/turn.php'
 #url='https://www.mousehuntgame.com'
