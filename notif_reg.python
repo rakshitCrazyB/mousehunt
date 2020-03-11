@@ -1,0 +1,5 @@
+from notify_run import Notify
+notify=Notify()
+print(notify.info)
+#print(notify.register())
+notify.send('Heyya Saxyy BUBU')
