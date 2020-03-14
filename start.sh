@@ -1,2 +1,1 @@
-python -u horn.py >>out.txt &
-disown  -h  %1
+nohup python -u horn.py >>out.txt &
