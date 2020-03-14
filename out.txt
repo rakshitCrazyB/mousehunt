@@ -1,0 +1,5 @@
+03/14/2020, 15:57:08 Starting Script
+03/14/2020, 15:57:08 Calling mousehunt
+03/14/2020, 15:57:09 LoggedIn True
+03/14/2020, 15:57:09 timetohorn 30
+03/14/2020, 15:57:09 Sleeping for 40
