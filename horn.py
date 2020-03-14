@@ -12,10 +12,11 @@ def log (info):
 notify=Notify()
 sleeptime = 900
 cookies={}
-hgsessid="p1I2BVE8KGbFcw1Sza0TdbhjPAsLxqN08ebL7ZlskBfSPzgCyqgusApDSKEWuU45"
+hgsessid="VJw34SvCmjGFNB8STCb5MRPN21h8a71eziD4ryFO7sLS4ab3h7JmnPRL9Yng2reT"
 phpsessid="jtam5thlg4l3j0od2hbfkbhk41"
 cookies = {'HGSESSID': hgsessid,'PHPSESSID': phpsessid,'has_logged_in':'true'}
-
+hgtoken='VJw34SvCmjGFNB8STCb5MRPN21h8a71eziD4ryFO7sLS4ab3h7JmnPRL9Yng2reT'
+cookies ={'HG_TOKEN': hgtoken}
 url='https://www.mousehuntgame.com/turn.php'
 #url='https://www.mousehuntgame.com'
 
@@ -38,6 +39,12 @@ while True:
 		exit()
 	else:
 		log("LoggedIn "+str(True))
+
+	if "The King has sent you a special reward!" in response:
+		log("Kings Reward")
+		notif('Kings Reward')
+		log("Dying as kings reward")
+		exit()
 
 	timeindex=response.find('Next Hunt');
 	time=response[timeindex+39:timeindex+44]
